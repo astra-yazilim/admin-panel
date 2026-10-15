@@ -35,3 +35,7 @@
 .optionText {
   @apply grid gap-1;
 }
+
+.themeSelect {
+  @apply w-36 shrink-0;
+}

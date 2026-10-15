@@ -1,3 +1,4 @@
+import { SelectField } from '@/components/common/select-field/select-field'
 import { StatusBadge } from '@/components/common/status-badge/status-badge'
 import { UserAvatar } from '@/components/common/user-avatar/user-avatar'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -6,11 +7,14 @@ import { Switch } from '@/components/ui/switch'
 import { useAuth } from '@/hooks/use-auth'
 import { useTheme } from '@/hooks/use-theme'
 import { useUiStore } from '@/store/ui.store'
-import { ROLE_DESCRIPTIONS, ROLE_LABELS } from '@/utils/validations/constants'
+import type { ThemePreference } from '@/types'
+import { ROLE_DESCRIPTIONS, ROLE_LABELS, THEME_LABELS } from '@/utils/validations/constants'
+import { toOptions } from '@/utils/validations/helpers'
 import { messages } from '@/utils/validations/messages'
 import styles from './preferences-panel.module.css'
 
 const { settings } = messages
+const THEME_OPTIONS = toOptions(THEME_LABELS)
 
 export function PreferencesPanel() {
   const { user } = useAuth()
@@ -44,13 +48,15 @@ export function PreferencesPanel() {
         <CardContent className={styles.options}>
           <div className={styles.option}>
             <div className={styles.optionText}>
-              <Label htmlFor="dark-mode">{settings.darkMode}</Label>
-              <span className={styles.muted}>{settings.darkModeDescription}</span>
+              <Label htmlFor="theme">{settings.theme}</Label>
+              <span className={styles.muted}>{settings.themeDescription}</span>
             </div>
-            <Switch
-              id="dark-mode"
-              checked={theme === 'dark'}
-              onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+            <SelectField<ThemePreference>
+              id="theme"
+              value={theme}
+              onValueChange={setTheme}
+              options={THEME_OPTIONS}
+              className={styles.themeSelect}
             />
           </div>
           <div className={styles.option}>

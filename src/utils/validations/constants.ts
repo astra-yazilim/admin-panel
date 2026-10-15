@@ -50,6 +50,7 @@ import {
   type StatusConfig,
   type SurveyStatus,
   type TrainingSource,
+  type ThemePreference,
   type TrainingStatus,
   type WeeklyAvailability,
   type WorkModel,
@@ -86,6 +87,13 @@ export const ROUTE_PATHS = {
   settings: '/settings',
 } as const
 
+export const PROJECT_BOARD_PARAMS = {
+  search: 'search',
+  category: 'category',
+  owner: 'owner',
+  project: 'project',
+} as const
+
 export const STORAGE_KEYS = {
   auth: 'astra-auth',
   ui: 'astra-ui',
@@ -116,6 +124,12 @@ export const UPCOMING_DEADLINE_DAYS = 14
 export const NEW_CLIENT_VALUE = '__new_client__' as const
 export const ALL_FILTER_VALUE = 'all' as const
 export const NO_LINK_VALUE = '__none__' as const
+
+export const THEME_LABELS: Record<ThemePreference, string> = {
+  light: 'Açık',
+  dark: 'Koyu',
+  system: 'Sistem',
+}
 
 export const ROLE_LABELS: Record<Role, string> = {
   super_admin: 'Süper Yönetici',

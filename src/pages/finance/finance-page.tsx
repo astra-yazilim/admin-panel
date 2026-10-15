@@ -1,5 +1,6 @@
-import { AlertTriangle, Banknote, HandCoins, PiggyBank, Wallet } from 'lucide-react'
+import { AlertTriangle, ArrowUpRight, Banknote, HandCoins, PiggyBank, Wallet } from 'lucide-react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { EmptyState } from '@/components/common/empty-state/empty-state'
 import { PageHeader } from '@/components/common/page-header/page-header'
 import { PageLoader } from '@/components/common/page-loader/page-loader'
@@ -11,7 +12,8 @@ import { useEntityMap } from '@/hooks/use-entity-map'
 import { useFinances } from '@/hooks/use-finance'
 import { useProjects } from '@/hooks/use-projects'
 import { PERMISSIONS, type ProjectFinance } from '@/types'
-import { formatCompactCurrency, formatPercent } from '@/utils/validations/formatters'
+import { PROJECT_BOARD_PARAMS, ROUTE_PATHS } from '@/utils/validations/constants'
+import { formatCompactCurrency, formatPercent, withQuery } from '@/utils/validations/formatters'
 import { getFinanceSummary } from '@/utils/validations/helpers'
 import { messages } from '@/utils/validations/messages'
 import { FinanceOverview } from './components/finance-overview/finance-overview'
@@ -85,7 +87,21 @@ export default function FinancePage() {
         <SheetContent className={styles.sheet}>
           <SheetHeader className={styles.sheetHeader}>
             <SheetTitle>{selectedProject?.title}</SheetTitle>
-            <SheetDescription>{selectedProject?.code}</SheetDescription>
+            <SheetDescription>
+              {selectedProject && (
+                <Link
+                  to={withQuery(ROUTE_PATHS.projects, {
+                    [PROJECT_BOARD_PARAMS.search]: selectedProject.code,
+                    [PROJECT_BOARD_PARAMS.project]: selectedProject.id,
+                  })}
+                  className={styles.projectLink}
+                  title={messages.finance.openOnBoard}
+                >
+                  {selectedProject.code}
+                  <ArrowUpRight />
+                </Link>
+              )}
+            </SheetDescription>
           </SheetHeader>
           <div className={styles.sheetBody}>{selectedFinance && <FinanceOverview finance={selectedFinance} />}</div>
         </SheetContent>

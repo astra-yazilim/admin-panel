@@ -7,6 +7,7 @@ import { useAuth } from '@/hooks/use-auth'
 import { useClients } from '@/hooks/use-clients'
 import { useDevelopers } from '@/hooks/use-developers'
 import { useEntityMap } from '@/hooks/use-entity-map'
+import { useProjectBoardParams } from '@/hooks/use-project-board-params'
 import { useMoveProject, useProjects } from '@/hooks/use-projects'
 import { PERMISSIONS, type Project } from '@/types'
 import { ALL_FILTER_VALUE } from '@/utils/validations/constants'
@@ -14,10 +15,8 @@ import { matchesSearch } from '@/utils/validations/helpers'
 import { messages } from '@/utils/validations/messages'
 import { KanbanBoard } from './components/kanban-board/kanban-board'
 import { ProjectDetailSheet } from './components/project-detail-sheet/project-detail-sheet'
-import { ProjectFilters, type ProjectFilterState } from './components/project-filters/project-filters'
+import { ProjectFilters } from './components/project-filters/project-filters'
 import { ProjectFormSheet } from './components/project-form-sheet/project-form-sheet'
-
-const INITIAL_FILTERS: ProjectFilterState = { search: '', category: ALL_FILTER_VALUE, owner: ALL_FILTER_VALUE }
 
 interface FormState {
   isOpen: boolean
@@ -33,8 +32,7 @@ export default function ProjectsPage() {
   const clientMap = useEntityMap(clients)
   const developerMap = useEntityMap(developers)
 
-  const [filters, setFilters] = useState(INITIAL_FILTERS)
-  const [selectedId, setSelectedId] = useState<string>()
+  const { filters, setFilters, selectedId, setSelectedId } = useProjectBoardParams()
   const [formState, setFormState] = useState<FormState>({ isOpen: false })
   const canWrite = can(PERMISSIONS.PROJECTS_WRITE)
 

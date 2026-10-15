@@ -1,20 +1,50 @@
-import { Moon, Sun } from 'lucide-react'
+import { Monitor, Moon, Sun, type LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
 import { useTheme } from '@/hooks/use-theme'
+import type { ThemePreference } from '@/types'
+import { THEME_LABELS } from '@/utils/validations/constants'
+import { toOptions } from '@/utils/validations/helpers'
 import { messages } from '@/utils/validations/messages'
 
+const THEME_ICONS: Record<ThemePreference, LucideIcon> = {
+  light: Sun,
+  dark: Moon,
+  system: Monitor,
+}
+
+const THEME_OPTIONS = toOptions(THEME_LABELS)
+
 export function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme()
-  const label = theme === 'dark' ? messages.common.lightTheme : messages.common.darkTheme
+  const { theme, setTheme } = useTheme()
+  const Icon = THEME_ICONS[theme]
+
   return (
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label={messages.common.toggleTheme}>
-          {theme === 'dark' ? <Sun /> : <Moon />}
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="icon" aria-label={messages.common.toggleTheme}>
+          <Icon />
         </Button>
-      </TooltipTrigger>
-      <TooltipContent>{label}</TooltipContent>
-    </Tooltip>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as ThemePreference)}>
+          {THEME_OPTIONS.map((option) => {
+            const OptionIcon = THEME_ICONS[option.value]
+            return (
+              <DropdownMenuRadioItem key={option.value} value={option.value}>
+                <OptionIcon />
+                {option.label}
+              </DropdownMenuRadioItem>
+            )
+          })}
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }

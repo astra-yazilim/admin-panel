@@ -75,6 +75,8 @@ export const toExternalUrl = (url: string) => (/^https?:\/\//.test(url) ? url : 
 
 export const toDateInputValue = (iso: string) => iso.slice(0, 10)
 
+export const withQuery = (path: string, params: Record<string, string>) => `${path}?${new URLSearchParams(params)}`
+
 export const buildPath = (path: string, params: Record<string, string>) =>
   Object.entries(params).reduce((result, [key, value]) => result.replace(`:${key}`, value), path)
 
