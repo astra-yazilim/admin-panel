@@ -1,0 +1,5 @@
+@reference "@/index.css";
+
+.header {
+  @apply h-16 justify-center border-b border-sidebar-border px-3 group-data-[collapsible=icon]:items-center group-data-[collapsible=icon]:px-2;
+}

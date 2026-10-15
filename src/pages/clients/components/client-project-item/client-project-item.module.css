@@ -1,0 +1,25 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-3 rounded-xl border p-3;
+}
+
+.main {
+  @apply grid min-w-0;
+}
+
+.code {
+  @apply font-mono text-xs text-muted-foreground;
+}
+
+.title {
+  @apply text-sm font-medium;
+}
+
+.meta {
+  @apply flex flex-wrap items-center gap-2;
+}
+
+.hint {
+  @apply text-xs text-muted-foreground;
+}

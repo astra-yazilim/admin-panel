@@ -1,0 +1,37 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid items-start gap-4 lg:grid-cols-2;
+}
+
+.profile {
+  @apply flex items-start gap-4;
+}
+
+.identity {
+  @apply grid gap-1;
+}
+
+.name {
+  @apply text-lg font-semibold;
+}
+
+.role {
+  @apply my-1 justify-self-start;
+}
+
+.muted {
+  @apply text-sm text-muted-foreground;
+}
+
+.options {
+  @apply grid gap-5;
+}
+
+.option {
+  @apply flex items-center justify-between gap-4;
+}
+
+.optionText {
+  @apply grid gap-1;
+}

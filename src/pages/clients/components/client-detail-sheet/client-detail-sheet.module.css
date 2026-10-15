@@ -1,0 +1,33 @@
+@reference "@/index.css";
+
+.content {
+  @apply w-full gap-0 sm:max-w-lg;
+}
+
+.header {
+  @apply border-b pr-12;
+}
+
+.badge {
+  @apply mb-1 self-start;
+}
+
+.body {
+  @apply grid flex-1 content-start gap-6 overflow-y-auto p-4;
+}
+
+.section {
+  @apply grid gap-3;
+}
+
+.heading {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+
+.hint {
+  @apply -mt-1 text-xs text-muted-foreground;
+}
+
+.projects {
+  @apply grid gap-2;
+}

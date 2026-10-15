@@ -1,0 +1,25 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-2;
+}
+
+.item {
+  @apply flex flex-wrap items-center gap-3 rounded-xl border p-3;
+}
+
+.main {
+  @apply grid min-w-0 flex-1 leading-tight;
+}
+
+.stage {
+  @apply text-sm font-medium;
+}
+
+.date {
+  @apply text-xs text-muted-foreground;
+}
+
+.amount {
+  @apply text-sm font-semibold tabular-nums;
+}

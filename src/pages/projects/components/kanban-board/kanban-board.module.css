@@ -1,0 +1,29 @@
+@reference "@/index.css";
+
+.root {
+  @apply -mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-4 md:-mx-6 md:px-6 lg:-mx-8 lg:px-8;
+}
+
+.column {
+  @apply flex w-[85vw] max-w-80 min-w-72 shrink-0 snap-start flex-col gap-3 rounded-2xl border border-transparent bg-muted/50 p-3 transition-colors sm:w-80;
+}
+
+.over {
+  @apply border-primary/50 bg-primary/5;
+}
+
+.columnHeader {
+  @apply flex items-center justify-between px-1;
+}
+
+.count {
+  @apply text-xs font-medium text-muted-foreground tabular-nums;
+}
+
+.cards {
+  @apply grid min-h-24 content-start gap-3;
+}
+
+.empty {
+  @apply rounded-xl border border-dashed py-8 text-center text-xs text-muted-foreground;
+}

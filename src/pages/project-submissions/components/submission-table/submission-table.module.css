@@ -1,0 +1,33 @@
+@reference "@/index.css";
+
+.root {
+  @apply rounded-xl border bg-card;
+}
+
+.row {
+  @apply cursor-pointer;
+}
+
+.stack {
+  @apply grid max-w-72 leading-tight;
+}
+
+.code {
+  @apply font-mono text-xs text-muted-foreground;
+}
+
+.name {
+  @apply truncate font-medium;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.budget {
+  @apply tabular-nums;
+}
+
+.date {
+  @apply text-right text-muted-foreground;
+}

@@ -1,0 +1,51 @@
+@reference "@/index.css";
+
+.scene {
+  @apply isolate bg-background;
+}
+
+.sky {
+  @apply pointer-events-none fixed inset-0 -z-10 overflow-hidden;
+}
+
+.star {
+  @apply absolute h-[1.5px] rounded-full opacity-0;
+  top: var(--top);
+  left: var(--left);
+  width: var(--length);
+  background: linear-gradient(90deg, transparent, var(--star-color));
+  transform: rotate(145deg) translateX(0);
+  transform-origin: right center;
+  animation: shoot var(--duration) linear var(--delay) infinite;
+}
+
+.star::after {
+  @apply absolute top-1/2 -right-px size-[3px] -translate-y-1/2 rounded-full;
+  content: '';
+  background: var(--star-color);
+  box-shadow: 0 0 8px 2px var(--star-glow);
+}
+
+@keyframes shoot {
+  0% {
+    opacity: 0;
+    transform: rotate(145deg) translateX(0);
+  }
+  1.5% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0;
+    transform: rotate(145deg) translateX(min(55vw, 640px));
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(145deg) translateX(min(55vw, 640px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky {
+    @apply hidden;
+  }
+}

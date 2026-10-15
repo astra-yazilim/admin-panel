@@ -1,0 +1,17 @@
+@reference "@/index.css";
+
+.sm {
+  @apply size-7 text-[10px] tracking-tight;
+}
+
+.md {
+  @apply size-9 text-xs;
+}
+
+.lg {
+  @apply size-14 text-base;
+}
+
+.fallback {
+  @apply bg-accent font-semibold text-accent-foreground;
+}

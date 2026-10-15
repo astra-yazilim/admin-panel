@@ -1,0 +1,9 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-6;
+}
+
+.hint {
+  @apply flex items-center gap-2 text-xs text-muted-foreground [&_svg]:size-4 [&_svg]:shrink-0;
+}

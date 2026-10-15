@@ -1,0 +1,37 @@
+@reference "@/index.css";
+
+.root {
+  @apply -mx-2 grid gap-1;
+}
+
+.item {
+  @apply flex flex-col gap-2 rounded-lg px-2 py-2 transition-colors hover:bg-muted sm:flex-row sm:items-center sm:justify-between;
+}
+
+.main {
+  @apply grid min-w-0;
+}
+
+.code {
+  @apply font-mono text-xs text-muted-foreground;
+}
+
+.title {
+  @apply truncate text-sm font-medium;
+}
+
+.meta {
+  @apply flex shrink-0 items-center gap-3;
+}
+
+.due {
+  @apply text-xs text-muted-foreground tabular-nums;
+}
+
+.overdue {
+  @apply font-medium text-destructive;
+}
+
+.empty {
+  @apply text-sm text-muted-foreground;
+}

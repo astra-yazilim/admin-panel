@@ -1,0 +1,33 @@
+@reference "@/index.css";
+
+.trigger {
+  @apply h-auto min-h-9 w-full justify-between py-1.5 font-normal;
+}
+
+.placeholder {
+  @apply text-muted-foreground;
+}
+
+.chevron {
+  @apply text-muted-foreground;
+}
+
+.content {
+  @apply w-(--radix-popover-trigger-width) min-w-80 p-0;
+}
+
+.checkbox {
+  @apply pointer-events-none;
+}
+
+.identity {
+  @apply grid min-w-0 flex-1 leading-tight;
+}
+
+.name {
+  @apply truncate text-sm;
+}
+
+.title {
+  @apply truncate text-xs text-muted-foreground;
+}

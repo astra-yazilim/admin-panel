@@ -1,0 +1,61 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4 rounded-xl border bg-card p-5 text-left transition-colors hover:border-primary/40 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none;
+}
+
+.header {
+  @apply flex items-start gap-3;
+}
+
+.identity {
+  @apply grid min-w-0 flex-1 gap-0.5;
+}
+
+.name {
+  @apply truncate font-medium;
+}
+
+.title {
+  @apply truncate text-sm text-muted-foreground;
+}
+
+.badges {
+  @apply mt-1 flex flex-wrap gap-1.5;
+}
+
+.availability {
+  @apply mt-1.5 size-2.5 shrink-0 rounded-full bg-muted-foreground/40;
+}
+
+.available {
+  @apply bg-success;
+}
+
+.skills {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.skill {
+  @apply rounded-md bg-muted px-2 py-0.5 text-xs text-muted-foreground;
+}
+
+.stats {
+  @apply grid grid-cols-3 gap-2 border-y py-3 text-center;
+}
+
+.stats dt {
+  @apply text-[11px] text-muted-foreground;
+}
+
+.stats dd {
+  @apply text-lg font-semibold tabular-nums;
+}
+
+.rating {
+  @apply flex items-center justify-between gap-2;
+}
+
+.reviews {
+  @apply text-xs text-muted-foreground;
+}

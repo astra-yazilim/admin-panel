@@ -1,0 +1,25 @@
+@reference "@/index.css";
+
+.root {
+  @apply rounded-xl border bg-card;
+}
+
+.row {
+  @apply cursor-pointer;
+}
+
+.stack {
+  @apply grid leading-tight;
+}
+
+.company {
+  @apply font-medium;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.numeric {
+  @apply text-right tabular-nums;
+}

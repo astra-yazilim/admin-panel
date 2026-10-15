@@ -1,0 +1,17 @@
+@reference "@/index.css";
+
+.root {
+  @apply flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed px-6 py-12 text-center;
+}
+
+.icon {
+  @apply mb-2 flex size-12 items-center justify-center rounded-full bg-muted text-muted-foreground [&_svg]:size-5;
+}
+
+.title {
+  @apply font-medium;
+}
+
+.description {
+  @apply max-w-sm text-sm text-muted-foreground;
+}

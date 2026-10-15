@@ -1,0 +1,73 @@
+@reference "@/index.css";
+
+.content {
+  @apply w-full gap-0 sm:max-w-xl;
+}
+
+.header {
+  @apply border-b pr-12;
+}
+
+.badge {
+  @apply mb-1 self-start;
+}
+
+.body {
+  @apply grid flex-1 content-start gap-8 overflow-y-auto p-4;
+}
+
+.section {
+  @apply grid gap-4;
+}
+
+.heading {
+  @apply font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase;
+}
+
+.field {
+  @apply grid gap-1.5;
+}
+
+.label {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+
+.value {
+  @apply text-sm;
+}
+
+.chips {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.about {
+  @apply rounded-lg bg-muted p-3 text-sm leading-relaxed;
+}
+
+.link {
+  @apply text-primary hover:underline;
+}
+
+.cv {
+  @apply flex items-center gap-3 rounded-xl border p-3 [&>svg]:size-5 [&>svg]:text-muted-foreground;
+}
+
+.cvName {
+  @apply grid min-w-0 flex-1 truncate text-sm font-medium;
+}
+
+.cvSize {
+  @apply text-xs font-normal text-muted-foreground;
+}
+
+.consents {
+  @apply grid gap-2 text-sm;
+}
+
+.accepted {
+  @apply flex items-center gap-2 [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-success;
+}
+
+.rejected {
+  @apply flex items-center gap-2 [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-destructive;
+}

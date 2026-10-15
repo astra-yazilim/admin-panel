@@ -1,0 +1,29 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4;
+}
+
+.item {
+  @apply flex gap-3;
+}
+
+.body {
+  @apply grid min-w-0 gap-0.5;
+}
+
+.message {
+  @apply text-sm text-muted-foreground;
+}
+
+.author {
+  @apply font-medium text-foreground;
+}
+
+.meta {
+  @apply font-mono text-xs text-muted-foreground;
+}
+
+.empty {
+  @apply text-sm text-muted-foreground;
+}

@@ -1,0 +1,29 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-3.5;
+}
+
+.row {
+  @apply grid gap-1.5;
+}
+
+.meta {
+  @apply flex items-baseline justify-between gap-3 text-sm;
+}
+
+.label {
+  @apply text-muted-foreground;
+}
+
+.value {
+  @apply font-medium tabular-nums;
+}
+
+.track {
+  @apply h-2 overflow-hidden rounded-full bg-muted;
+}
+
+.bar {
+  @apply h-full rounded-full bg-primary transition-[width] duration-500;
+}

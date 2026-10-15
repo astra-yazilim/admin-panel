@@ -1,0 +1,5 @@
+@reference "@/index.css";
+
+.form {
+  @apply grid gap-4;
+}

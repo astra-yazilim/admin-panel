@@ -1,0 +1,13 @@
+@reference "@/index.css";
+
+.root {
+  @apply flex min-h-60 flex-1 items-center justify-center gap-2 text-muted-foreground;
+}
+
+.spinner {
+  @apply size-5 animate-spin text-primary;
+}
+
+.label {
+  @apply text-sm;
+}

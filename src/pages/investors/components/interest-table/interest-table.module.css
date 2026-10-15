@@ -1,0 +1,33 @@
+@reference "@/index.css";
+
+.root {
+  @apply rounded-xl border bg-card;
+}
+
+.stack {
+  @apply grid leading-tight;
+}
+
+.name {
+  @apply font-medium;
+}
+
+.code {
+  @apply font-mono text-xs text-muted-foreground;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.note {
+  @apply max-w-72 text-sm whitespace-normal text-muted-foreground;
+}
+
+.status {
+  @apply w-44;
+}
+
+.date {
+  @apply text-right text-muted-foreground;
+}

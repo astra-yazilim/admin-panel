@@ -1,0 +1,25 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-6;
+}
+
+.stack {
+  @apply grid;
+}
+
+.strong {
+  @apply font-semibold tabular-nums;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.section {
+  @apply grid gap-3;
+}
+
+.heading {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}

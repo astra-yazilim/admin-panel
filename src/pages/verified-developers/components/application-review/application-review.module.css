@@ -1,0 +1,21 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4;
+}
+
+.row {
+  @apply grid gap-4 sm:grid-cols-2;
+}
+
+.field {
+  @apply grid gap-2;
+}
+
+.save {
+  @apply justify-self-end;
+}
+
+.approve {
+  @apply grid items-end gap-3 rounded-xl border border-primary/30 bg-primary/5 p-4 sm:grid-cols-[1fr_auto];
+}

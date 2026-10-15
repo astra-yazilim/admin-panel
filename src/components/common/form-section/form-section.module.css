@@ -1,0 +1,21 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-5;
+}
+
+.header {
+  @apply grid gap-1;
+}
+
+.title {
+  @apply font-mono text-xs font-semibold tracking-[0.25em] text-muted-foreground uppercase;
+}
+
+.description {
+  @apply text-sm text-muted-foreground;
+}
+
+.body {
+  @apply grid gap-5 sm:grid-cols-2;
+}

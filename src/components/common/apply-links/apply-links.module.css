@@ -1,0 +1,21 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-2;
+}
+
+.title {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+
+.links {
+  @apply flex flex-wrap gap-2;
+}
+
+.link {
+  @apply inline-flex items-center gap-2 rounded-full border bg-background/60 px-3.5 py-1.5 text-sm font-medium backdrop-blur transition-colors hover:border-primary/50 hover:text-primary [&_svg]:size-4;
+}
+
+.arrow {
+  @apply text-muted-foreground;
+}

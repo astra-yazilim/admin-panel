@@ -1,0 +1,41 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid content-start gap-4 rounded-2xl border bg-card p-5 text-left transition-[border-color,transform] hover:-translate-y-0.5 hover:border-primary/40 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none;
+}
+
+.header {
+  @apply flex items-center justify-between gap-2;
+}
+
+.code {
+  @apply font-mono text-xs text-muted-foreground;
+}
+
+.sent {
+  @apply flex items-center gap-1 text-xs font-medium text-success [&_svg]:size-3.5;
+}
+
+.title {
+  @apply -mb-2 text-lg font-semibold;
+}
+
+.tagline {
+  @apply text-sm text-muted-foreground;
+}
+
+.tags {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.facts {
+  @apply grid grid-cols-2 gap-3 border-t pt-3;
+}
+
+.facts dt {
+  @apply text-xs text-muted-foreground;
+}
+
+.facts dd {
+  @apply text-sm font-medium;
+}

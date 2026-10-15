@@ -1,0 +1,33 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4;
+}
+
+.table {
+  @apply rounded-xl border bg-card;
+}
+
+.row {
+  @apply cursor-pointer;
+}
+
+.applicant {
+  @apply grid leading-tight;
+}
+
+.name {
+  @apply font-medium;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.expertise {
+  @apply flex items-center gap-1.5;
+}
+
+.date {
+  @apply text-right text-muted-foreground;
+}

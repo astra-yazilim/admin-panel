@@ -1,0 +1,53 @@
+@reference "@/index.css";
+
+.root {
+  @apply gap-4;
+}
+
+.tabs {
+  @apply w-full justify-start overflow-x-auto;
+}
+
+.panel {
+  @apply grid content-start gap-6 pt-2;
+}
+
+.section {
+  @apply grid gap-2;
+}
+
+.heading {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+
+.text {
+  @apply text-sm leading-relaxed;
+}
+
+.callout {
+  @apply rounded-lg border-l-2 border-gold bg-gold/5 px-4 py-3 text-sm leading-relaxed;
+}
+
+.progressRow {
+  @apply flex justify-between text-sm text-muted-foreground tabular-nums;
+}
+
+.contact {
+  @apply grid;
+}
+
+.muted {
+  @apply text-sm text-muted-foreground;
+}
+
+.tags {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.link {
+  @apply inline-flex items-center gap-1 text-primary hover:underline [&_svg]:size-3.5;
+}
+
+.code {
+  @apply rounded bg-muted px-1.5 py-0.5 font-mono text-xs;
+}

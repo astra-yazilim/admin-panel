@@ -1,0 +1,41 @@
+@reference "@/index.css";
+
+.root {
+  @apply gap-2 p-5;
+}
+
+.header {
+  @apply flex items-center justify-between gap-3;
+}
+
+.label {
+  @apply text-sm font-medium text-muted-foreground;
+}
+
+.icon {
+  @apply flex size-9 items-center justify-center rounded-lg [&_svg]:size-4;
+}
+
+.primary {
+  @apply bg-primary/10 text-primary;
+}
+
+.gold {
+  @apply bg-gold/10 text-gold;
+}
+
+.info {
+  @apply bg-info/10 text-info;
+}
+
+.danger {
+  @apply bg-destructive/10 text-destructive;
+}
+
+.value {
+  @apply text-3xl font-semibold tracking-tight tabular-nums;
+}
+
+.hint {
+  @apply text-xs text-muted-foreground;
+}

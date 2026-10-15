@@ -1,0 +1,9 @@
+@reference "@/index.css";
+
+.banner {
+  @apply flex items-start gap-3 rounded-xl border border-gold/30 bg-gold/10 p-4 text-sm text-gold [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:shrink-0;
+}
+
+.grid {
+  @apply grid gap-4 md:grid-cols-2 2xl:grid-cols-3;
+}

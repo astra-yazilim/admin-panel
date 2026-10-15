@@ -1,0 +1,9 @@
+@reference "@/index.css";
+
+.root {
+  @apply relative isolate select-none;
+}
+
+.overlay {
+  @apply pointer-events-none absolute inset-0 z-10;
+}

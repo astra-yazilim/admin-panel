@@ -1,0 +1,9 @@
+@reference "@/index.css";
+
+.required {
+  @apply ml-0.5 text-destructive;
+}
+
+.fullWidth {
+  @apply sm:col-span-2;
+}

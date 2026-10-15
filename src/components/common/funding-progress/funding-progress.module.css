@@ -1,0 +1,21 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-1.5;
+}
+
+.meta {
+  @apply flex items-baseline justify-between gap-2;
+}
+
+.amount {
+  @apply font-semibold tabular-nums;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground tabular-nums;
+}
+
+.bar {
+  @apply h-2;
+}

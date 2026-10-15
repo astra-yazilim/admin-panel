@@ -1,0 +1,25 @@
+@reference "@/index.css";
+
+.back {
+  @apply -ml-2 self-start text-muted-foreground;
+}
+
+.header {
+  @apply grid gap-2;
+}
+
+.meta {
+  @apply flex items-center gap-2;
+}
+
+.code {
+  @apply font-mono text-sm text-muted-foreground;
+}
+
+.titleRow {
+  @apply flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between;
+}
+
+.title {
+  @apply text-2xl font-semibold tracking-tight;
+}

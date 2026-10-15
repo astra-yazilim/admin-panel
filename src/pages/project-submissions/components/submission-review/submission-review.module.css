@@ -1,0 +1,13 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4;
+}
+
+.field {
+  @apply grid gap-2;
+}
+
+.actions {
+  @apply flex flex-wrap justify-end gap-2;
+}

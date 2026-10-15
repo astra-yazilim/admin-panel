@@ -1,0 +1,21 @@
+@reference "@/index.css";
+
+.root {
+  @apply -mx-1 flex gap-1 overflow-x-auto px-1 pb-1;
+}
+
+.tab {
+  @apply flex shrink-0 items-center gap-2 rounded-lg border border-transparent px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none;
+}
+
+.active {
+  @apply border-border bg-card text-foreground shadow-xs;
+}
+
+.count {
+  @apply rounded-full bg-muted px-1.5 text-xs font-medium tabular-nums;
+}
+
+.active .count {
+  @apply bg-primary/15 text-primary;
+}

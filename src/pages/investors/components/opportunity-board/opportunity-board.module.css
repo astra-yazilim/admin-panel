@@ -1,0 +1,45 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4;
+}
+
+.toolbar {
+  @apply flex justify-end;
+}
+
+.grid {
+  @apply grid gap-4 md:grid-cols-2 2xl:grid-cols-3;
+}
+
+.card {
+  @apply grid content-start gap-4 rounded-xl border bg-card p-5;
+}
+
+.header {
+  @apply flex items-center gap-2;
+}
+
+.code {
+  @apply mr-auto font-mono text-xs text-muted-foreground;
+}
+
+.edit {
+  @apply -my-1 size-8;
+}
+
+.title {
+  @apply -mb-2 font-semibold;
+}
+
+.tagline {
+  @apply text-sm text-muted-foreground;
+}
+
+.tags {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.footer {
+  @apply flex justify-between border-t pt-3 text-xs text-muted-foreground;
+}

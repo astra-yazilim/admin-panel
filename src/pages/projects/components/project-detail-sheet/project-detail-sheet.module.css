@@ -1,0 +1,33 @@
+@reference "@/index.css";
+
+.content {
+  @apply w-full gap-0 sm:max-w-2xl;
+}
+
+.header {
+  @apply gap-2 border-b pr-12;
+}
+
+.meta {
+  @apply flex items-center gap-2;
+}
+
+.code {
+  @apply font-mono text-xs text-muted-foreground;
+}
+
+.title {
+  @apply text-lg leading-snug;
+}
+
+.srOnly {
+  @apply sr-only;
+}
+
+.actions {
+  @apply flex flex-wrap gap-2 pt-1;
+}
+
+.body {
+  @apply flex-1 overflow-y-auto p-4;
+}

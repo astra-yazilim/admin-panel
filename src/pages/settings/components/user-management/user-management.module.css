@@ -1,0 +1,25 @@
+@reference "@/index.css";
+
+.root {
+  @apply rounded-xl border bg-card;
+}
+
+.user {
+  @apply flex items-center gap-3;
+}
+
+.identity {
+  @apply grid leading-tight;
+}
+
+.name {
+  @apply font-medium;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.roleCell {
+  @apply w-56;
+}

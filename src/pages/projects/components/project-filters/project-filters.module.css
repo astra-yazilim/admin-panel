@@ -1,0 +1,9 @@
+@reference "@/index.css";
+
+.root {
+  @apply flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center;
+}
+
+.select {
+  @apply sm:w-56;
+}

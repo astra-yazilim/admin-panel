@@ -1,0 +1,17 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4;
+}
+
+.filters {
+  @apply flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center;
+}
+
+.select {
+  @apply sm:w-52;
+}
+
+.grid {
+  @apply grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4;
+}

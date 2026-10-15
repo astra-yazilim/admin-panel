@@ -1,0 +1,29 @@
+@reference "@/index.css";
+
+.content {
+  @apply w-full gap-0 sm:max-w-xl;
+}
+
+.header {
+  @apply border-b;
+}
+
+.form {
+  @apply flex min-h-0 flex-1 flex-col;
+}
+
+.body {
+  @apply grid flex-1 content-start gap-4 overflow-y-auto p-4;
+}
+
+.row {
+  @apply grid gap-4 sm:grid-cols-2;
+}
+
+.footer {
+  @apply flex-row justify-end border-t;
+}
+
+.spinner {
+  @apply animate-spin;
+}

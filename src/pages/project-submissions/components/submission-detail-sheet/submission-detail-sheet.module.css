@@ -1,0 +1,73 @@
+@reference "@/index.css";
+
+.content {
+  @apply w-full gap-0 sm:max-w-2xl;
+}
+
+.header {
+  @apply border-b pr-12;
+}
+
+.badges {
+  @apply mb-1 flex flex-wrap gap-1.5;
+}
+
+.body {
+  @apply grid flex-1 content-start gap-8 overflow-y-auto p-4;
+}
+
+.section {
+  @apply grid gap-4;
+}
+
+.heading {
+  @apply font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase;
+}
+
+.block {
+  @apply grid gap-1.5;
+}
+
+.label {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+
+.text {
+  @apply text-sm leading-relaxed;
+}
+
+.callout {
+  @apply rounded-lg border-l-2 border-gold bg-gold/5 px-4 py-3 text-sm leading-relaxed;
+}
+
+.progress {
+  @apply flex items-center gap-2 tabular-nums [&>*:first-child]:h-1.5 [&>*:first-child]:w-24;
+}
+
+.chips {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.features {
+  @apply grid list-disc gap-1 pl-5 text-sm marker:text-primary;
+}
+
+.model {
+  @apply font-medium;
+}
+
+.notice {
+  @apply rounded-lg bg-gold/10 p-3 text-sm text-gold;
+}
+
+.signature {
+  @apply flex flex-wrap items-center gap-2 text-sm [&_svg]:size-4 [&_svg]:text-primary;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.link {
+  @apply inline-flex items-center gap-1 text-primary hover:underline [&_svg]:size-3.5;
+}

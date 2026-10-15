@@ -1,0 +1,9 @@
+@reference "@/index.css";
+
+.tabs {
+  @apply gap-4;
+}
+
+.list {
+  @apply max-w-full justify-start overflow-x-auto;
+}

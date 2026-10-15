@@ -1,0 +1,37 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-3 rounded-xl border border-dashed p-4;
+}
+
+.header {
+  @apply grid gap-0.5;
+}
+
+.title {
+  @apply text-sm font-medium;
+}
+
+.hint {
+  @apply text-xs text-muted-foreground;
+}
+
+.list {
+  @apply grid gap-1;
+}
+
+.account {
+  @apply flex w-full items-center gap-3 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none;
+}
+
+.identity {
+  @apply grid min-w-0 leading-tight;
+}
+
+.name {
+  @apply truncate text-sm font-medium;
+}
+
+.role {
+  @apply truncate text-xs text-muted-foreground;
+}

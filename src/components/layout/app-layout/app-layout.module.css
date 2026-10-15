@@ -1,0 +1,9 @@
+@reference "@/index.css";
+
+.inset {
+  @apply min-w-0;
+}
+
+.main {
+  @apply mx-auto flex w-full max-w-[1600px] flex-1 flex-col gap-6 p-4 md:p-6 lg:p-8;
+}

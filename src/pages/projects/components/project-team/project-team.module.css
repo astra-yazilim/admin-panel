@@ -1,0 +1,41 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4;
+}
+
+.level {
+  @apply text-sm text-muted-foreground;
+}
+
+.level strong {
+  @apply font-medium text-foreground;
+}
+
+.empty {
+  @apply text-sm text-muted-foreground;
+}
+
+.list {
+  @apply grid gap-2;
+}
+
+.member {
+  @apply flex flex-wrap items-center gap-3 rounded-xl border p-3;
+}
+
+.identity {
+  @apply grid min-w-0 flex-1 leading-tight;
+}
+
+.name {
+  @apply truncate text-sm font-medium;
+}
+
+.title {
+  @apply truncate text-xs text-muted-foreground;
+}
+
+.badges {
+  @apply flex gap-1.5;
+}

@@ -1,0 +1,53 @@
+@reference "@/index.css";
+
+.content {
+  @apply w-full gap-0 overflow-y-auto sm:max-w-2xl;
+}
+
+.header {
+  @apply border-b pr-12;
+}
+
+.confidential {
+  @apply mb-1 inline-flex items-center gap-1.5 self-start rounded-full border border-gold/30 bg-gold/10 px-2.5 py-0.5 text-xs font-medium text-gold [&_svg]:size-3.5;
+}
+
+.title {
+  @apply text-xl;
+}
+
+.body {
+  @apply grid content-start gap-6 p-4;
+}
+
+.tags {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.section {
+  @apply grid gap-1.5;
+}
+
+.heading {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+
+.text {
+  @apply text-sm leading-relaxed;
+}
+
+.highlights {
+  @apply grid gap-2 text-sm;
+}
+
+.highlights li {
+  @apply flex items-start gap-2 [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-primary;
+}
+
+.footer {
+  @apply border-t;
+}
+
+.sent {
+  @apply flex items-center justify-center gap-2 text-sm font-medium text-success [&_svg]:size-4;
+}

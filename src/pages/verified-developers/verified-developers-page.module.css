@@ -1,0 +1,5 @@
+@reference "@/index.css";
+
+.tabs {
+  @apply gap-4;
+}

@@ -1,0 +1,69 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid items-start gap-4 lg:grid-cols-[320px_1fr];
+}
+
+.summary {
+  @apply lg:sticky lg:top-20;
+}
+
+.scores {
+  @apply grid gap-4;
+}
+
+.score {
+  @apply grid gap-1;
+}
+
+.scoreLabel {
+  @apply text-xs text-muted-foreground;
+}
+
+.rate {
+  @apply flex items-baseline gap-2 text-2xl font-semibold tabular-nums;
+}
+
+.list {
+  @apply grid gap-3;
+}
+
+.item {
+  @apply grid gap-3 rounded-xl border bg-card p-4;
+}
+
+.itemHeader {
+  @apply flex items-start justify-between gap-3;
+}
+
+.itemTitle {
+  @apply grid;
+}
+
+.code {
+  @apply font-mono text-xs text-muted-foreground;
+}
+
+.client {
+  @apply font-medium;
+}
+
+.metrics {
+  @apply grid gap-3 sm:grid-cols-3;
+}
+
+.metrics dt {
+  @apply text-xs text-muted-foreground;
+}
+
+.comment {
+  @apply rounded-lg bg-muted p-3 text-sm text-muted-foreground italic;
+}
+
+.developers {
+  @apply flex items-center justify-between gap-2;
+}
+
+.muted {
+  @apply text-xs font-normal text-muted-foreground;
+}

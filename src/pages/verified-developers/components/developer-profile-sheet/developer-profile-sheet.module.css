@@ -1,0 +1,77 @@
+@reference "@/index.css";
+
+.content {
+  @apply w-full gap-0 sm:max-w-lg;
+}
+
+.header {
+  @apply border-b pr-12;
+}
+
+.identity {
+  @apply flex items-start gap-4;
+}
+
+.badges {
+  @apply mt-2 flex gap-1.5;
+}
+
+.body {
+  @apply grid flex-1 content-start gap-6 overflow-y-auto p-4;
+}
+
+.score {
+  @apply flex items-center justify-between gap-4 rounded-xl border bg-muted/40 p-4;
+}
+
+.scoreLabel {
+  @apply block text-xs text-muted-foreground;
+}
+
+.scoreValue {
+  @apply text-3xl font-semibold text-primary tabular-nums;
+}
+
+.scoreRating {
+  @apply grid justify-items-end gap-1;
+}
+
+.section {
+  @apply grid gap-2;
+}
+
+.heading {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+
+.chips {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.review {
+  @apply grid gap-1.5 rounded-lg border p-3;
+}
+
+.reviewHeader {
+  @apply flex items-center justify-between gap-2;
+}
+
+.reviewProject {
+  @apply text-sm font-medium;
+}
+
+.reviewComment {
+  @apply text-sm text-muted-foreground italic;
+}
+
+.source {
+  @apply text-xs text-gold;
+}
+
+.muted {
+  @apply text-sm text-muted-foreground;
+}
+
+.link {
+  @apply text-primary hover:underline;
+}

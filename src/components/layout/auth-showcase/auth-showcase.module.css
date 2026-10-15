@@ -1,0 +1,165 @@
+@reference "@/index.css";
+
+.root {
+  @apply relative isolate hidden min-h-svh flex-col gap-10 overflow-hidden border-r bg-card/60 p-10 lg:flex xl:p-14;
+}
+
+.grid {
+  @apply absolute inset-0 -z-10 opacity-[0.35];
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 60% 40%, black 20%, transparent 70%);
+}
+
+.glow {
+  @apply absolute -z-10 size-[560px] rounded-full blur-3xl;
+  top: 10%;
+  right: -12%;
+  background: radial-gradient(circle, color-mix(in oklab, var(--primary) 22%, transparent), transparent 65%);
+  animation: drift 14s ease-in-out infinite alternate;
+}
+
+.feature {
+  @apply grid items-center gap-8 xl:grid-cols-[15rem_minmax(0,1fr)];
+}
+
+.constellation {
+  @apply relative mx-auto hidden aspect-square w-full max-w-60 xl:block;
+  container-type: inline-size;
+}
+
+.sparkle {
+  @apply absolute;
+}
+
+.ringOuter {
+  @apply absolute inset-[8%] rounded-full border border-dashed border-primary/30;
+  animation: spin 40s linear infinite;
+}
+
+.ringInner {
+  @apply absolute inset-[28%] rounded-full border border-brand-gold/40;
+  animation: spin 26s linear infinite reverse;
+}
+
+.node {
+  @apply absolute top-1/2 left-1/2 size-0;
+  transform: rotate(var(--angle)) translateY(-42cqw);
+}
+
+.nodeLabel {
+  @apply absolute -translate-x-1/2 -translate-y-1/2 rounded-full border bg-background px-3 py-1 text-xs font-medium whitespace-nowrap shadow-sm;
+  rotate: calc(-1 * var(--angle));
+  animation: spin 40s linear infinite reverse;
+}
+
+.core {
+  @apply absolute inset-[36%] grid place-items-center rounded-full bg-background shadow-lg ring-1 ring-border;
+  animation: pulse-ring 4s ease-in-out infinite;
+}
+
+.copy {
+  @apply grid gap-4;
+}
+
+.eyebrow {
+  @apply font-mono text-xs font-semibold tracking-[0.25em] text-brand-gold uppercase;
+}
+
+.slogan {
+  @apply text-4xl leading-[1.1] font-semibold tracking-tight xl:text-5xl;
+}
+
+.accent {
+  @apply bg-linear-to-r from-primary to-brand-gold bg-clip-text text-transparent;
+}
+
+.description {
+  @apply max-w-md text-muted-foreground;
+}
+
+.audiences {
+  @apply grid gap-3;
+}
+
+.audiencesTitle {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+
+.audienceList {
+  @apply grid gap-2;
+}
+
+.audience {
+  @apply flex items-center gap-3 rounded-xl border bg-background/50 px-4 py-3 backdrop-blur transition-colors hover:border-primary/40;
+  animation: rise 0.6s ease-out both;
+}
+
+.audienceIcon {
+  @apply flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary [&_svg]:size-4;
+}
+
+.audienceText {
+  @apply grid;
+}
+
+.audienceTitle {
+  @apply text-sm font-medium;
+}
+
+.audienceDescription {
+  @apply text-xs leading-relaxed text-muted-foreground;
+}
+
+.footer {
+  @apply mt-auto grid gap-6;
+}
+
+.copyright {
+  @apply text-xs text-muted-foreground;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-60px, 80px) scale(1.15);
+  }
+}
+
+@keyframes pulse-ring {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--primary) 30%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 14px transparent;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow,
+  .ringOuter,
+  .ringInner,
+  .nodeLabel,
+  .core,
+  .audience {
+    animation: none;
+  }
+}

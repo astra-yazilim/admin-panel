@@ -1,0 +1,25 @@
+@reference "@/index.css";
+
+.root {
+  @apply inline-flex items-center gap-0.5;
+}
+
+.star {
+  @apply text-muted-foreground/40;
+}
+
+.sm .star {
+  @apply size-3.5;
+}
+
+.md .star {
+  @apply size-5;
+}
+
+.filled {
+  @apply fill-gold text-gold;
+}
+
+.value {
+  @apply ml-1.5 text-sm font-medium tabular-nums;
+}

@@ -1,0 +1,5 @@
+@reference "@/index.css";
+
+.toolbar {
+  @apply flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between;
+}

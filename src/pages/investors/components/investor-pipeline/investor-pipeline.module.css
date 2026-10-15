@@ -1,0 +1,37 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-4;
+}
+
+.toolbar {
+  @apply flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between;
+}
+
+.table {
+  @apply rounded-xl border bg-card;
+}
+
+.row {
+  @apply cursor-pointer;
+}
+
+.stack {
+  @apply grid leading-tight;
+}
+
+.name {
+  @apply font-medium;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.budget {
+  @apply tabular-nums;
+}
+
+.date {
+  @apply text-right text-muted-foreground;
+}

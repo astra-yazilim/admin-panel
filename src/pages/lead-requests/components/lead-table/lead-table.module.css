@@ -1,0 +1,29 @@
+@reference "@/index.css";
+
+.root {
+  @apply rounded-xl border bg-card;
+}
+
+.row {
+  @apply cursor-pointer;
+}
+
+.contact {
+  @apply grid leading-tight;
+}
+
+.name {
+  @apply font-medium;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.service {
+  @apply max-w-64 truncate;
+}
+
+.date {
+  @apply text-right text-muted-foreground;
+}

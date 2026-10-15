@@ -1,0 +1,17 @@
+@reference "@/index.css";
+
+.root {
+  @apply flex items-center -space-x-1;
+}
+
+.item {
+  @apply inline-flex;
+}
+
+.avatar {
+  @apply ring-2 ring-card;
+}
+
+.more {
+  @apply flex size-7 items-center justify-center rounded-full bg-muted text-[10px] font-semibold text-muted-foreground ring-2 ring-card;
+}

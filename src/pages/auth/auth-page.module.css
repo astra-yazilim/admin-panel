@@ -1,0 +1,41 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-8;
+}
+
+.heading {
+  @apply grid gap-1.5;
+}
+
+.title {
+  @apply text-2xl font-semibold tracking-tight;
+}
+
+.description {
+  @apply text-sm text-muted-foreground;
+}
+
+.form {
+  @apply grid gap-4;
+}
+
+.labelRow {
+  @apply flex items-center justify-between;
+}
+
+.link {
+  @apply text-xs font-medium text-primary hover:underline;
+}
+
+.success {
+  @apply flex items-start gap-3 rounded-lg border border-primary/30 bg-primary/10 p-4 text-sm [&_svg]:size-5 [&_svg]:shrink-0 [&_svg]:text-primary;
+}
+
+.spinner {
+  @apply animate-spin;
+}
+
+.backLink {
+  @apply inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground [&_svg]:size-4;
+}

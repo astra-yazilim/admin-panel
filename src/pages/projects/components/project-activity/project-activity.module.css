@@ -1,0 +1,41 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-6;
+}
+
+.composer {
+  @apply grid gap-2;
+}
+
+.submit {
+  @apply justify-self-end;
+}
+
+.spinner {
+  @apply animate-spin;
+}
+
+.timeline {
+  @apply grid gap-5 border-l pl-5;
+}
+
+.entry {
+  @apply relative -ml-[2.15rem] flex gap-3;
+}
+
+.body {
+  @apply grid min-w-0 gap-1;
+}
+
+.meta {
+  @apply flex flex-wrap items-baseline gap-x-2 text-xs text-muted-foreground;
+}
+
+.author {
+  @apply text-sm font-medium text-foreground;
+}
+
+.message {
+  @apply text-sm text-muted-foreground;
+}

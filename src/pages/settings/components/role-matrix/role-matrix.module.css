@@ -1,0 +1,29 @@
+@reference "@/index.css";
+
+.root {
+  @apply rounded-xl border bg-card;
+}
+
+.role {
+  @apply text-center;
+}
+
+.permission {
+  @apply grid;
+}
+
+.key {
+  @apply font-mono text-[11px] text-muted-foreground;
+}
+
+.cell {
+  @apply text-center;
+}
+
+.granted {
+  @apply mx-auto size-4 text-primary;
+}
+
+.denied {
+  @apply mx-auto size-4 text-muted-foreground/40;
+}

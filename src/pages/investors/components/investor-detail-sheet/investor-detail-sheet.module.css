@@ -1,0 +1,57 @@
+@reference "@/index.css";
+
+.content {
+  @apply w-full gap-0 sm:max-w-xl;
+}
+
+.header {
+  @apply border-b pr-12;
+}
+
+.badge {
+  @apply mb-1 self-start;
+}
+
+.body {
+  @apply grid flex-1 content-start gap-8 overflow-y-auto p-4;
+}
+
+.section {
+  @apply grid gap-4;
+}
+
+.heading {
+  @apply font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase;
+}
+
+.checks {
+  @apply grid gap-2 text-sm;
+}
+
+.ok {
+  @apply flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-success;
+}
+
+.warn {
+  @apply flex items-center gap-2 [&_svg]:size-4 [&_svg]:text-warning;
+}
+
+.chips {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.note {
+  @apply rounded-lg bg-muted p-3 text-sm;
+}
+
+.signature {
+  @apply flex flex-wrap items-center gap-2 text-sm [&_svg]:size-4 [&_svg]:text-primary;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.link {
+  @apply inline-flex items-center gap-1 text-primary hover:underline [&_svg]:size-3.5;
+}

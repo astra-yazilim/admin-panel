@@ -1,0 +1,29 @@
+@reference "@/index.css";
+
+.root {
+  @apply inline-flex shrink-0 text-brand-ink [&_svg]:h-full [&_svg]:w-auto;
+}
+
+.full.sm {
+  @apply h-7;
+}
+
+.full.md {
+  @apply h-9;
+}
+
+.full.lg {
+  @apply h-14;
+}
+
+.icon.sm {
+  @apply size-7;
+}
+
+.icon.md {
+  @apply size-8;
+}
+
+.icon.lg {
+  @apply size-16;
+}

@@ -1,0 +1,57 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-3 rounded-xl border bg-card p-3.5 shadow-xs transition-[border-color,opacity,transform] hover:border-primary/40;
+}
+
+.movable {
+  @apply cursor-grab active:cursor-grabbing;
+}
+
+.dragging {
+  @apply scale-[0.98] opacity-50;
+}
+
+.header {
+  @apply flex items-center gap-2;
+}
+
+.code {
+  @apply mr-auto font-mono text-xs text-muted-foreground;
+}
+
+.menu {
+  @apply -my-1 -mr-1.5 size-7;
+}
+
+.title {
+  @apply text-left text-sm leading-snug font-medium hover:text-primary focus-visible:text-primary focus-visible:outline-none;
+}
+
+.client {
+  @apply -mt-2 truncate text-xs text-muted-foreground;
+}
+
+.tags {
+  @apply flex flex-wrap items-center gap-2;
+}
+
+.category {
+  @apply text-xs text-muted-foreground;
+}
+
+.progress {
+  @apply h-1.5;
+}
+
+.footer {
+  @apply flex items-center justify-between gap-2;
+}
+
+.due {
+  @apply flex items-center gap-1 text-xs text-muted-foreground tabular-nums [&_svg]:size-3.5;
+}
+
+.overdue {
+  @apply font-medium text-destructive;
+}

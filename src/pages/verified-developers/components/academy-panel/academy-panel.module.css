@@ -1,0 +1,65 @@
+@reference "@/index.css";
+
+.root {
+  @apply grid gap-8;
+}
+
+.section {
+  @apply grid gap-3;
+}
+
+.heading {
+  @apply text-sm font-semibold;
+}
+
+.modules {
+  @apply grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5;
+}
+
+.module {
+  @apply gap-4;
+}
+
+.moduleMeta {
+  @apply mb-1 flex items-center justify-between;
+}
+
+.duration {
+  @apply flex items-center gap-1 text-xs text-muted-foreground [&_svg]:size-3.5;
+}
+
+.moduleTitle {
+  @apply leading-snug;
+}
+
+.moduleFooter {
+  @apply mt-auto flex items-center gap-2 text-xs text-muted-foreground [&_svg]:size-4 [&_svg]:text-primary;
+}
+
+.table {
+  @apply rounded-xl border bg-card;
+}
+
+.developer {
+  @apply flex items-center gap-2;
+}
+
+.identity {
+  @apply grid leading-tight;
+}
+
+.muted {
+  @apply text-xs text-muted-foreground;
+}
+
+.moduleCell {
+  @apply max-w-56 truncate;
+}
+
+.gap {
+  @apply max-w-80 text-sm whitespace-normal text-muted-foreground;
+}
+
+.status {
+  @apply w-44;
+}
